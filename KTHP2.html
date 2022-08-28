@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Airline</title>
+   
+    <link type="text/css" rel="stylesheet" href="KTHP2CSS.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div id="order">
+        <div style="float: left; height: 290px; width: 500px; background-color: rgb(243, 239, 241);">
+            <img id="or" src="hinh/mau-xam-la-mau-gi-1.jpg" height="200px" width="180px" style="float: left;border:1px solid black; margin:10px 10px">
+            <p style="float: left;">Họ tên: <input id="namee" type="text" size="25"></p>
+            <p style="float: left;">Ngày sinh:<input id="ngaysinhh" type="date"></p>
+            <p style="float: left;">CMND/CCCD<input id="cmndd" type="text"></p>
+            <p style="float: left;">Ngày đi:<input id="ngaydii" type="datetime-local"></p>
+
+            <p style="float: left;">Số lượng: <input id="soll" size="5" type="range " min="0" max="50" step="1" value="25"><br><input onclick="orrrr()" type="button" value="Xác nhận"></p> 
+            
+        </div>
+
+        <div id="ddwaaa" style="float: left; background-color: rgb(233, 212, 224); height: 290px; width: 500px;">
+           
+            <p style="float: left; ">Họ tên:&nbsp <p id="name"></p></p><br>
+            <p style="float: left;">Ngày sinh:&nbsp<p id="ngaysinh"></p></p><br>
+            <p style="float: left;">CMND/CCCD:&nbsp<p id="cmnd"></p></p><br>
+            <p style="float: left;">Ngày đi:&nbsp<p id="ngaydi"></p></p><br>
+            <p style="float: left;">Số lượng:&nbsp<p id="sl"></p></p><br>
+            <input onclick=" eee()" type="button" value="Đặt vé">
+            <input onclick=" eeee()" type="button" value="Thoát">
+            
+        </div>
+
+        <script>
+            function orrrr()
+            {
+                var n=document.getElementById("namee").value;
+                var s=document.getElementById("ngaysinhh").value;
+                var c=document.getElementById("cmndd").value;
+                var d=document.getElementById("ngaydii").value;
+                var l=document.getElementById("soll").value;
+
+                document.getElementById("name").innerHTML=n;
+                document.getElementById("ngaysinh").innerHTML=s;
+                document.getElementById("cmnd").innerHTML=c;
+                document.getElementById("ngaydi").innerHTML=d;
+                document.getElementById("sl").innerHTML=l;
+                
+                document.getElementById("ddwaaa").style.lineHeight="1";
+
+            }
+
+
+            function eee()
+            {
+                alert("Quý khách đã đặt vé thành công!!!")
+                document.getElementById("order").style.display="none";
+            }
+
+            function eeee()
+            {
+                alert("Cảm ơn quý khách hẹn gặp lại- Thank you so much")
+                document.getElementById("order").style.display="none";
+            }
+        </script>
+        
+
+
+    </div>
+
+    <div class="containes">
+        <div class="row">
+            <div class="col-md-4 " style="background-color: rgba(230, 191, 176, 0.42) ; " >
+                <img  style=" margin-top: 30px; margin-left: 160px;" src="hinh/2560px-Delta_logo.svg.jpg" height="50px" width="200px">
+                <br><p style="margin-left: 190px; font-size: larger; color: rgba(33, 47, 135, 0.737);" ><b>Sải cánh vươn cao</b></p>
+            </div>
+
+            <div  class="col-md " style="background-color: rgba(230, 191, 176, 0.42) ; ">
+                <ul id="www">
+                    <li onmouseenter="rrr()"  onmouseleave="lll()" class="ww1"><a href="#"><b>Ưu đãi</b></a</li>
+                    <li onmouseenter="rrr1()"  onmouseleave="lll1()" class="ww1"><a href="#"><b>Thông tin đặt vé</b></a></li>
+                    <li onmouseenter="rrr2()"  onmouseleave="lll2()" class="ww1"><a href="#"><b>Thông tin hành trình</b></a></li>
+                    <li onmouseenter="rrr3()"  onmouseleave="lll3()" class="ww1"><a href="#"><b>Delta Club</b></a></li>
+                    <li onmouseenter="rrr4()"  onmouseleave="lll4()" class="ww1"><a href="#"><b>Về chúng tôi</b></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function rrr()
+        {
+            document.getElementById("uudai").style.zIndex="2";
+        }
+
+         function lll()
+        {
+            document.getElementById("uudai").style.zIndex="-2";
+        }
+
+
+        function rrr1()
+        {
+            document.getElementById("thongtin").style.zIndex="2";
+        }
+
+         function lll1()
+        {
+            document.getElementById("thongtin").style.zIndex="-2";
+        }
+
+        function rrr2()
+        {
+            document.getElementById("thongtinhc").style.zIndex="2";
+        }
+
+         function lll2()
+        {
+            document.getElementById("thongtinhc").style.zIndex="-2";
+        }
+
+        function rrr3()
+        {
+            document.getElementById("club").style.zIndex="2";
+        }
+
+         function lll3()
+        {
+            document.getElementById("club").style.zIndex="-2";
+        }
+
+        function rrr4()
+        {
+            document.getElementById("aboutmyself").style.zIndex="2";
+        }
+
+         function lll4()
+        {
+            document.getElementById("aboutmyself").style.zIndex="-2";
+        }
+
+
+        
+    </script>
+
+  
+        <div class="containes s" ">
+            <div class="row">
+                <div  class="col-md " >
+                    <div id="uudai" style="width: 100%;;position:absolute ;background-color: rgb(155, 66, 119);"  >
+                        <ul class="f">
+                            <li class="tt"> Vé máy bay nội địa</li>
+                            <li class="gg">Đặt vé ngày thứ 4 </li>
+                            <li class="gg">Đặt vé cuối tuần</li>
+                        </ul>
+
+
+                        <ul  class="f">
+                            <li class="tt"> Delta Holiday</li>
+                            <li class="gg">Đón hè rực rỡ</li>
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Vé tháng Delta</li>
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Thẻ bay trả trước</li>
+                            <li class="gg"> Delta Pass Dynamic</li>
+                            <li class="gg"> Delta Club Unlimited</li>
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Combo nghĩ dưỡng</li>
+                            
+                        </ul>
+                    </div>
+
+
+
+                    <div id="thongtin" style="width: 100%;;position:absolute ;background-color: rgb(155, 66, 119);"  >
+                        <ul class="f">
+                            <li class="tt"> Đặt chuyến bay</li>
+                            <li class="gg">Đặt vé máy bay </li>
+                            <li class="gg">Hạng vé & giá vé</li>
+                            <li class="gg">Thuế và phụ thu</li>
+                            <li class="gg">Câu hỏi</li>
+
+                        </ul>
+
+
+                        <ul  class="f">
+                            <li class="tt"> Dịch vụ bổ trợ</li>
+                            <li class="gg">Phiếu quà tặng</li>
+                            <li class="gg">Nâng hạng vé</li>
+                            
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt">Điều kiện giá vé</li>
+                            <li class="gg">Vé nội địa</li>
+                            <li class="gg">Vé quốc tế</li>
+                            <li class="gg">Đổi ngày giờ</li>
+                            <li class="gg">Thế phí</li>
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Vé máy bay</li>
+                            <li class="gg"> Vé máy bay quốc tế</li>
+                            <li class="gg"> Vé máy bay nội địa</li>
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Hướng dẫn sử dụng</li>
+                            <li class="gg"> Vé mtháng</li>
+                            <li class="gg"> Thuế trả trước và voucher</li>
+                            
+                        </ul>
+                    </div>
+
+
+                    <div id="thongtinhc" style="width: 100%;;position:absolute ;background-color: rgb(155, 66, 119);"  >
+                        <ul class="f">
+                            <li class="tt"> Thông tin hành lý</li>
+                            <li class="gg">Hành lý sách tay </li>
+                            <li class="gg">Hành lý miễn cước</li>
+                            <li class="gg">Hành lý tính cước</li>
+                            <li class="gg">Hành lý đặt biệt</li>
+                            <li class="gg">Liên hệ tìm kiếm</li>
+                            <li class="gg">Vật phẩm nguy hiểm</li>
+
+                        </ul>
+
+
+                        <ul  class="f">
+                            <li class="tt"> Thông tin hành khách</li>
+                            <li class="gg">Đi cùng trẻ em</li>
+                            <li class="gg">Phụ nữ mang thai</li>
+                            <li class="gg">Người cao tuổi</li>
+                            <li class="gg">Người khuyết tật</li>
+                            
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt">Làm thủ tục</li>
+                            <li class="gg">Trực tuyến</li>
+                            <li class="gg">Tại sân bay</li>
+                            <li class="gg">Quầy làm thủ tục tự động</li>
+                            
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Sản phẩm liên kết</li>
+                            <li class="gg"> Quần thể nghỉ dưỡng FLC</li>
+                            <li class="gg"> Delta Holidays</li>
+                            <li class="gg"> Golf</li>
+                            <li class="gg"> Delta VIP</li>
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Thông tin khuyến cáo</li>
+                            <li class="gg">Chính sách covid</li>
+                            <li class="gg"> Quy trình nhập cảnh
+
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+
+
+                    <div id="club" style="width: 100%;;position:absolute ;background-color: rgb(155, 66, 119);"  >
+                        <ul class="f">
+                            <li class="tt"> Giới thiệu</li>
+                            <li class="gg">Giới thiệu Delta Club </li>
+                            <li class="gg">Ưu đãi các hạng vé</li>
+                            <li class="gg">Tin tức</li>
+                            <li class="gg">Phiên ngang thẻ</li>
+                            <li class="gg">Hội viên</li>
+                            
+
+                        </ul>
+
+
+                        <ul  class="f">
+                            <li class="tt"> Đăng ký hội viên</li>
+                            <li class="gg">Tiếp nhận đăng ký</li>
+                            <li class="gg">Câu hỏi thường gặp</li>
+                            <li class="gg">Đăng nhập</li>
+                            <li class="gg">Điều khoản và điều kiện</li>
+                            
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt">Cộng điểm & Xét hạng</li>
+                            <li class="gg">Nguyên tác cộng điểm</li>
+                            <li class="gg">Tiêu chuẩn</li>
+                            
+                            
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Mua và sử dụng điểm</li>
+                            <li class="gg"> Mua điểm xét hạng</li>
+                            <li class="gg"> Mua điểm thưởng</li>
+                            <li class="gg"> Sử dụng điểm thưởng</li>
+                           
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Ưu đãi đối tác</li>
+                            <li class="gg">Ngân hàng/Bảo hiểm</li>
+                            <li class="gg"> Nghỉ dưỡng/Golf
+
+                            </li>
+                            <li class="gg">Ẩm thực/Làm đẹp</li>
+                            <li class="gg">Viễn thông</li>
+                            <li class="gg">Giải trí/ Mua sắm</li>
+                            
+                        </ul>
+                    </div>
+
+
+
+                    <div id="aboutmyself" style="width: 100%;;position:absolute ;background-color: rgb(155, 66, 119);"  >
+                        <ul class="f">
+                            <li class="tt"> Thông tin công ty</li>
+                            <li class="gg">Giới thiệu Delta Airline </li>
+                            <li class="gg">Thông điệp Delta Airline</li>
+                            <li class="gg">Đội bay</li>
+                            <li class="gg">Giới thiệu về FLC</li>
+                            <li class="gg">Hình ảnh đẹp Delta Airline</li>
+                            
+
+                        </ul>
+
+
+                        <ul  class="f">
+                            <li class="tt"> Tin tức & Báo chí</li>
+                            <li class="gg">Tin tức mới nhất</li>
+                            <li class="gg">Thông cáo báo chí</li>
+                            <li class="gg">Báo chí nói về chúng tôi</li>
+                            
+                            
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt">Cơ hội nghề nghiệp</li>
+                           
+                            
+                            
+                        </ul>
+
+                        <ul  class="f">
+                            <li class="tt"> Thông tin liên hệ</li>
+                            <li class="gg"> Liên hệ</li>
+                            <li class="gg"> Đăng ký nhận tin</li>
+                          
+                           
+                        </ul>
+
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+  
+
+
+    <div class="containes">
+        <div class="row">
+          
+
+            <div  class="col-md " style="background-image: url(hinh/AIR-Convention-ASIA-event-page-banner.jpg) ; height: 350px; ">
+                <ul id="www2">
+                    <li class="ww2"><a href="#">
+                        <img  src="hinh/q1.jpg" height="20px" width="20px">
+                        <b>Đặt vé</b></a>
+                    </li>
+                    <li class="ww2"><a href="#">
+                        <img  src="hinh/q2.jpg" height="20px" width="20px">
+                        <b>Khách sạn</b></a>
+                    </li>
+                    <li class="ww2"><a href="#">
+                        <img  src="hinh/q3.jpg" height="20px" width="20px">
+                        <b>Ưu đãi</b></a>
+                    </li>
+                    <li class="ww2"><a href="#">
+                        <img  src="hinh/q4.jpg" height="20px" width="20px">
+                        <b>Quản lý</b></a>
+                    </li>
+                    <li class="ww2"><a href="#">
+                        <img  src="hinh/q4.jpg" height="20px" width="20px">
+                        <b>Quà tặng</b></a>
+                    </li>
+                </ul>
+
+                <div  style="clear: both;"></div>
+                
+                <div>
+                    <p style="font-size:medium; float: left; color: rgb(255, 255, 255); margin-left: 27%;"><b>Điểm đi:</b></p>
+                    <p style="font-size:medium; float: left; color: rgb(255, 255, 255); margin-left: 189px;"><b>Điểm đến:</b></p>
+                </div>
+                <div  style="clear: both;"></div>
+                <div style="opacity: 0.8;margin-left: 26%;border:1px solid black; height:70px; width: 662px; background-color: aliceblue;">
+                        
+
+                  
+                    
+                      <select name="country" id="register_country"  style="font-size: larger;width:200px; margin-top: 20px; margin-left: 20px;">
+                        <option value="india">India</option>
+                        <option value="pakistan">Pakistan</option>
+                        <option value="africa">Africa</option>
+                        <option value="china">China</option>
+                        <option value="other">other</option>
+                      </select>
+
+                      <img src="hinh/kisspng-computer-icons-icon-design-download-swap-5b23b37f3e9725.9982512715290663672564-removebg-preview.jpg" height="30px" width="30px" style="margin-left: 10px;">
+                      <select name="country" id="register_country"  style="font-size: larger;width:200px; margin-top: 20px; margin-left: 20px;">
+                        <option value="india">Japan</option>
+                        <option value="pakistan">VietNam</option>
+                        <option value="africa">Thailand</option>
+                        <option value="china">HongKong</option>
+                        <option value="other">other</option>
+                      </select>
+
+                      <input  type="button" style="color: aliceblue;background-color:rgb(190, 16, 16); margin-left: 10px ; border: 1px solid rgb(190, 16, 16);" value="Tìm chuyến bay">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2 style = "padding: 10px;border-left: 5px solid rgb(148, 8, 45);font-family:helvetica; margin-top: 20px;margin-left: 20px; color: rgb(211, 49, 49)">Trải nghiệm</h2>
+
+    <div class="containes">
+        <div class="row">
+            <div  class="col-md ">
+                <ul  id="e">
+                    <li class="ee" style="margin-left: 50px">
+                       
+                            <a href="#"><img src="hinh/e1.jpg" height=" 200px" width=" 200px" style="border: 3px solid rgb(179, 63, 63);border-radius: 100%;margin-left: 2px; margin-top: 2px;"></a>
+                        
+                    </li>
+
+
+                    <li  class="ee">
+                        <a href="#"><img src="hinh/e2.jpg" height=" 200px" width=" 200px" style="border: 3px solid rgb(179, 63, 63);border-radius: 100%;margin-left: 2px; margin-top: 2px;"></a>
+                    </li>
+
+                    <li  class="ee">
+                        <a href="#"><img src="hinh/e3.jpg" height=" 200px" width=" 200px" style="border: 3px solid rgb(179, 63, 63);border-radius: 100%;margin-left: 2px; margin-top: 2px;"></a>
+                    </li>
+
+                    <li  class="ee">
+                        <a href="#"><img src="hinh/e4.jpg" height=" 200px" width=" 200px" style="border: 3px solid rgb(179, 63, 63);border-radius: 100%;margin-left: 2px; margin-top: 2px;"></a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="containes">
+        <div class="row">
+            <div class="col-md-4  "><hr style="border: 2px solid rgb(159, 46, 46);width: 300px;" ></div>
+            <div  class="col-md-4 ">
+                 <h2  style = "margin-left: 80px;font-family:helvetica; color: rgb(211, 49, 49)">Theo dõi chuyến bay</h2>
+            </div>
+            <div class="col-md-4 "><hr style="border: 2px solid  rgb(159, 46, 46);width: 300px;" ></div>
+        </div>
+    </div>
+
+   
+
+    <div class="containes">
+        <div class="row">
+            <div class="col-md bg-light ">
+                <ul id="cll">
+                    <li class="cl">
+                        <span id="gio"><b>00</b></span><span style="color: white; font-size: xx-large;">&nbsp &nbsp<b>:</b></span>
+                    </li>
+
+                    <li class="cl">
+                        <span id="phut"><b>00</b></span><span style="color: white; font-size: xx-large;">&nbsp &nbsp<b>:</b></span>
+                    </li>
+
+                    <li class="cl">
+                        <span id="giay"><b>00</b></span><span style="color: white; font-size: xx-large;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    function Dong_ho() {
+        var gio = document.getElementById("gio");
+        var phut = document.getElementById("phut");
+        var giay = document.getElementById("giay");
+        var Gio_hien_tai = new Date().getHours();
+        var Phut_hien_tai = new Date().getMinutes();
+        var Giay_hien_tai = new Date().getSeconds();
+        gio.innerHTML = Gio_hien_tai;
+        phut.innerHTML = Phut_hien_tai;
+        giay.innerHTML = Giay_hien_tai;
+    }
+   var Dem_gio = setInterval(Dong_ho, 1000);
+</script>
+
+    <iframe src="KTHP3.html" style="margin-left: 50px; margin-top: 11px;" width="1180px" height="300px" scrolling allowfullscreen></iframe>
+
+
+
+    <div class="containes">
+        <div class="row">
+            <div class="col-md-4  "><hr style="border: 2px solid rgb(159, 46, 46);width: 300px;" ></div>
+            <div  class="col-md-4 ">
+                 <h2  style = "margin-left: 80px;font-family:helvetica; color: rgb(211, 49, 49)">Ưu đãi chuyến bay</h2>
+            </div>
+            <div class="col-md-4 "><hr style="border: 2px solid  rgb(159, 46, 46);width: 300px; " ></div>
+        </div>
+    </div>
+
+
+    <div class="containes">
+        <div class="row">
+            <div class="col-md-3  ">
+                <ul class="nav flex-column" style="border-bottom: 1px solid ">
+				
+                    <li class="nav-item" style="background-color: rgb(178, 24, 24);">
+                        <a class="nav-link active" id="hd" aria-current="page" href="#" style="color: yellow;"><b>Chuyến bay</b></a>
+                    </li>
+                    
+                    <li class="nav-item" onclick="sd1()" id="khuu1">
+                        <a class="nav-link " onclick="sd1()"  id="ca"  ><b>Châu Á</b></a>
+                    </li>
+                    
+                    <li class="nav-item" onclick="sd2()" id="khuu2">
+                        <a class="nav-link " id="cm"  onclick="sd2()" ><b>Châu Mỹ</b></a>
+                    </li>
+                    
+                    <li class="nav-item" onclick="sd3()" id="khuu3">
+                        <a class="nav-link " id="cau" onclick="sd3()" ><b>Châu Âu</b></a>
+                    </li>
+                    
+                    <li class="nav-item" onclick="sd4()" id="khuu4">
+                        <a class="nav-link " id="cp" onclick="sd4()" ><b>Châu Phi</b></a>
+                    </li>
+                    
+                   
+                    
+                </ul>
+
+            </div>
+
+
+            <script>
+                function sd1()
+                {
+                    document.getElementById("chaua").style.display="block";
+                    document.getElementById("chauau").style.display="none";
+                    document.getElementById("chauphi").style.display="none";
+                    document.getElementById("chaumy").style.display="none";
+                    document.getElementById("khuu1").style.backgroundColor="rgb(186, 17, 71)";
+                    document.getElementById("khuu2").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                    document.getElementById("khuu3").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                    document.getElementById("khuu4").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+
+                }
+
+                function sd2()
+                {
+                     document.getElementById("chaua").style.display="none";
+                    document.getElementById("chaumy").style.display="block";
+                    document.getElementById("chauphi").style.display="none";
+                    document.getElementById("chauau").style.display="none";
+                    document.getElementById("khuu2").style.backgroundColor="rgb(186, 17, 71)";  
+                    document.getElementById("khuu1").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                    document.getElementById("khuu3").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                    document.getElementById("khuu4").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                }
+                function sd3()
+                {
+                    document.getElementById("chauau").style.display="block";
+                    document.getElementById("chauphi").style.display="none";
+                    document.getElementById("chaua").style.display="none";
+                    document.getElementById("chaumy").style.display="none";
+
+                    document.getElementById("khuu3").style.backgroundColor="rgb(186, 17, 71)";  
+                    document.getElementById("khuu1").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                    document.getElementById("khuu2").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                    document.getElementById("khuu4").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                }
+                function sd4()
+                {
+                    document.getElementById("chauphi").style.display="block";
+                    document.getElementById("chaua").style.display="none";
+                    document.getElementById("chauau").style.display="none";
+                    document.getElementById("chaumy").style.display="none";
+
+                    document.getElementById("khuu4").style.backgroundColor="rgb(186, 17, 71)";  
+                    document.getElementById("khuu1").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                    document.getElementById("khuu3").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                    document.getElementById("khuu2").style.backgroundColor="rgba(219, 196, 196, 0.648)"; 
+                }
+             </script>
+
+            <div class="col-md  ">
+                <!-- Châu á -->
+                <div id="chaua">
+
+
+                    <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">	Israel (IR - Jerusalem)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/07/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>2.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">2 chiều/ Thương gia</p>
+                            <a onclick="orr()"  id="khuuvh5" class="btn btn-primary" style="color: aliceblue;margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                        <script>
+                            function orr()
+                            {
+                                document.getElementById("or").src="hinh/892bf4d62b34eb6ab225.jpg"
+                                document.getElementById("order").style.display="block";
+                                
+                            }
+
+
+
+                        </script>
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Indonesia (IN -Jakarta)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/08/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>1.856.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                      
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Nepal (N - Kathmandu)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 23/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>1.806.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">2 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                      
+
+
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z4.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Qatar (Q - Doha)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/05/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>2.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                      
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Hàn Quốc (K - Seoul)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>1.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+
+                      
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/Z6.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">VietNam (VN - Hà Nội )</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>1.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+    
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z7.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">China (CN - Bắc Kinh )</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 07/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>1.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                      
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z8.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Thailand (TL - Băng Cốc )</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 12/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>1.856.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+
+                      
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z9.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">India (I - India)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/08/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>1.656.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                </div>
+
+
+
+
+
+
+                <!-- Châu âu -->
+                <div id="chauau" >
+
+
+                    <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z10.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Pháp ( F - Pari)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 023/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>3.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+    
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z11.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Thụy Điển ( T - Stockholm)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>5.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                      
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z12.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> Ukraine (U - Kyiv )</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/08/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>4.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                      
+
+
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z13.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Ý (I - Roma)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 16/07/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>3.576.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                      
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z14.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Russia  (R - Moskva) </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>8.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+
+                      
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z15.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> Iceland (IL -Dublin )</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>5.126.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+    
+
+                </div>
+
+
+
+
+
+                <!-- Châu phi -->
+                <div id="chauphi">
+
+
+                    <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z15.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Canada (C - Ottawa)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>3.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+    
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z16.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Hoa Kỳ (HK - Washington)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 06/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>5.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                      
+
+                      <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z17.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mexico (M - México)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>5.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+                      
+
+
+
+                      
+                      
+
+                      
+                </div>
+
+
+
+                <!--Chau My-->
+                <div id="chaumy">
+
+                    <div id="hoa5" class="card fd" style="width: 18rem;float:left ;">
+                        <img class="card-img-top" src="hinh/z20.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Ai Cập (AC - Cairô)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Khởi hành: 08/06/2022</h6>
+                            <p class="card-text"  style="text-align: right">Từ</p>
+                            <h5 style="text-align: right; color: rgb(223, 155, 27);"><b>1.456.000 VND</b></h5>
+                            <p class="card-text" style="text-align: right">1 chiều/ phổ thông</p>
+                            <a href="#" id="khuu5" class="btn btn-primary" style="margin-left: 35%; border: 1px solid crimson ;background-color: crimson;">Đặt vé</a>
+                        </div>
+                      </div>
+    
+
+                      
+                </div>
+
+
+                <!---Không đụng-->
+            </div>
+        </div>
+    </div>
+
+    <br> <br>
+    <div class="containes">
+        <div class="row">
+            <div class="col-md " style="background-color: rgb(230, 191, 176) ; " >
+                <img  style="float: left; margin-top: 30px; margin-left: 30px;" src="hinh/2560px-Delta_logo.svg.jpg" height="50px" width="200px">
+                <p  style=" margin-left: 40px;margin-top: 30px; float: left;">DELTA AIRLINE TỰ HÀO LÀ HÃNG HÀNG KHÔNG QUỐC TẾ 5 SAO <br> Xin trân trọng cảm ơn sự đồng hành của Quý khách và bạn hàng!</p>
+            </div>
+
+           
+        </div>
+    </div>
+
+
+</body>
+</html>

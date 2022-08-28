@@ -1,0 +1,139 @@
+.ww1{
+    float: left;
+    padding: 10px 10px;
+    list-style: none;
+}
+
+.ww1:hover {
+    float: left;
+    padding: 10px 10px;
+    list-style: none;
+   background-color: rgb(174, 41, 5);
+   border: 1px solid rgb(174, 41, 5);
+   border-radius: 30px;
+   color: white;
+}
+
+.ww1 a{
+    text-decoration: none;
+    font-size: large;
+    color: rgb(176, 92, 47);
+}
+
+.ww1 a:hover{
+    text-decoration: none;
+    font-size: large;
+    color: rgb(255, 255, 255);
+}
+
+#www{
+    margin-top: 60px;
+}
+
+.ww2{
+    float: left;
+    padding: 20px ;
+    list-style: none;
+    border: 1px solid white;
+    background-color: white;
+    border-left: 1px solid black;
+   opacity: 0.9;
+}
+
+.ww2 a{
+    text-decoration: none;
+    
+    color: rgb(176, 92, 47);
+}
+
+#www2{
+    background-color: white;
+    margin-top: 40px;
+    margin-left:300px ;
+}
+
+
+.ee{
+    float: left;
+    padding: 30px ;
+    list-style: none;
+}
+
+#cll{
+    margin-left: 35%;
+}
+
+.cl{
+    float: left;
+    padding: 30px ;
+    list-style: none;
+    border: 1px solid black;
+    background-color: black;
+}
+
+.cl #gio, .cl #phut, .cl #giay{
+    color: aliceblue;
+    font-size:xx-large;
+
+}
+[class*="nav-item"] {
+    padding: 10px ;
+    list-style: none;
+    border-bottom: 1px solid black;
+    background-color: rgba(219, 196, 196, 0.648);
+    margin-left: 10px;
+ }
+ [class*="nav-link"]
+ {
+     color: rgb(0, 0, 0);
+     font-size: larger;
+     margin-left: 15px;
+ }
+
+ #chauau,#chauphi, #chaumy{
+     display: none;
+ }
+
+ #chaua{
+     display: block;
+ }
+ 
+ [class*="card fd"]
+ {
+     background-color: rgba(234, 210, 218, 0.217);
+ }
+
+ #order{
+    border: 1px solid black; 
+    height: 290px; 
+    width: 1004px; 
+    background-color: bisque; 
+    margin-left: 10%;
+    margin-top: 8%;
+    position: fixed;
+    z-index: 3;
+    display: none;
+ }
+
+
+ .f{
+     float: left;
+     margin-left: 30px;
+     
+ }
+
+ .tt , .gg{
+    list-style: none;
+    font-size: large;
+ }
+
+
+ .tt{
+     color: rgb(234, 200, 200);;
+     font-weight: bold;
+ }
+
+ .gg{
+     color: aliceblue;
+ }
+ 
